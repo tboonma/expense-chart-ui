@@ -20,6 +20,8 @@ const SpendingCard = () => {
   async function getData() {
     let allExpenses = 0
     let maxHeight = expenses[0].amount
+    let days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+    let today = days[new Date().getDay()]
     for (let i = 0; i < expenses.length; i++) {
       allExpenses += expenses[i].amount
       if (expenses[i].amount > maxHeight) {
@@ -33,7 +35,7 @@ const SpendingCard = () => {
         day: expenses[i].day,
         amount: expenses[i].amount,
         height: expenses[i].amount * multiplier,
-        isMax: expenses[i].amount === maxHeight,
+        isToday: expenses[i].day === today,
       })
     }
     setTotalThisMonth(allExpenses.toFixed(2))
@@ -45,12 +47,12 @@ const SpendingCard = () => {
         Spending - Last {dateAmount} days
       </h1>
       <div className="grid justify-center">
-        <div className="spending-graph w-full flex flex-row items-end scrollbar-hide relative px-5">
+        <div className="spending-graph w-full flex flex-row items-end scrollbar-hide relative px-4">
           {heights.map((h) => (
             <div key={h.day} className="grid place-items-center">
               <div
                 className={`spending-bar rounded-md hover:opacity-60 hover:cursor-pointer ${
-                  h.isMax ? 'bg-cyan' : 'bg-softred'
+                  h.isToday ? 'bg-cyan' : 'bg-softred'
                 }`}
                 style={{ height: h.height + 'px' }}
               ></div>
@@ -78,7 +80,9 @@ const SpendingCard = () => {
         <div className="grid place-items-end">
           <div className="">
             <p className="font-bold text-darkbrown text-right">+2.4%</p>
-            <p className="text-sm text-mediumbrown">from last month</p>
+            <p className="text-sm text-mediumbrown text-right">
+              from last month
+            </p>
           </div>
         </div>
       </div>
