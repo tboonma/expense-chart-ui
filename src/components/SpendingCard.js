@@ -24,6 +24,8 @@ const SpendingCard = () => {
     let today = days[new Date().getDay()]
     for (let i = 0; i < expenses.length; i++) {
       allExpenses += expenses[i].amount
+    }
+    for (let i = 0; i < dateAmount; i++) {
       if (expenses[i].amount > maxHeight) {
         maxHeight = expenses[i].amount
       }
