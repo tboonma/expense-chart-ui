@@ -43,6 +43,18 @@ const SpendingCard = () => {
     setTotalThisMonth(allExpenses.toFixed(2))
     setHeights(tempHeights)
   }
+
+  function setActiveState(e) {
+    e.preventDefault()
+    let amountTag = e.target.nextSibling
+    if (e.target.classList.contains('opacity-60')) {
+      e.target.classList.remove('opacity-60')
+      amountTag.classList.add('hidden')
+    } else {
+      e.target.classList.add('opacity-60')
+      amountTag.classList.remove('hidden')
+    }
+  }
   return (
     <div className="bg-white rounded-xl p-6 px-8 grid gap-5">
       <h1 className="spending-title text-2xl font-bold">
@@ -57,9 +69,11 @@ const SpendingCard = () => {
                   h.isToday ? 'bg-cyan' : 'bg-softred'
                 }`}
                 style={{ height: h.height + 'px' }}
+                onClick={setActiveState}
               ></div>
               <div
-                className="bg-darkbrown text-white rounded-md py-2 spending-bar-amount text-xs text-center font-bold text-bold w-14 absolute"
+                id="amount"
+                className="bg-darkbrown text-white rounded-md py-2 spending-bar-amount text-xs text-center font-bold text-bold w-14 absolute hidden"
                 style={{ top: 165 - h.height }}
               >
                 ${h.amount}

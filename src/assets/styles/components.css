@@ -35,10 +35,17 @@
   display: block;
 }
 
+.spending-bar-amount:focus {
+  display: block;
+}
+
+.spending-bar:focus {
+  opacity: 0.6;
+}
+
 .spending-bar-amount {
   padding-left: 0.15rem;
   padding-right: 0.15rem;
-  display: none;
 }
 
 .text-darkbrown {
