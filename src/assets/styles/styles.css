@@ -16,3 +16,14 @@ body {
 .w-50vw {
   width: 50vw;
 }
+
+.components-width {
+  width: 38.5%;
+  max-width: 1440px;
+}
+
+@media only screen and (max-width: 770px) {
+  .components-width {
+    width: 90%;
+  }
+}

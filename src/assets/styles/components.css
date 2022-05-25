@@ -3,5 +3,88 @@
 @tailwind utilities;
 
 .balance-background {
-    background-color: hsl(10, 79%, 65%);
+  background-color: hsl(10, 79%, 65%);
+}
+
+// Spending Card
+.spending-background {
+  background-color: hsl(33, 100%, 98%);
+}
+
+.spending-title {
+  color: hsl(25, 47%, 15%);
+  letter-spacing: 1.1px;
+}
+
+.spending-graph {
+  height: 14rem;
+  overflow: scroll;
+  gap: 0.85rem;
+}
+
+.spending-line {
+  background-color: hsl(27, 66%, 92%);
+  height: 1px;
+}
+
+.spending-bar {
+  width: 2.5rem;
+}
+
+.spending-bar:hover + .spending-bar-amount {
+  display: block;
+}
+
+.spending-bar-amount {
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  display: none;
+}
+
+.text-darkbrown {
+  color: hsl(25, 47%, 15%);
+}
+
+.text-softred {
+  color: hsl(10, 79%, 65%);
+}
+
+.text-cyan {
+  color: hsl(186, 34%, 60%);
+}
+
+.text-mediumbrown {
+  color: hsl(28, 10%, 53%);
+}
+
+.text-cream {
+  color: hsl(27, 66%, 92%);
+}
+
+.text-paleorange {
+  color: hsl(33, 100%, 98%);
+}
+
+.bg-darkbrown {
+  background-color: hsl(25, 47%, 15%);
+}
+
+.bg-softred {
+  background-color: hsl(10, 79%, 65%);
+}
+
+.bg-cyan {
+  background-color: hsl(186, 34%, 60%);
+}
+
+.bg-mediumbrown {
+  background-color: hsl(28, 10%, 53%);
+}
+
+.bg-cream {
+  background-color: hsl(27, 66%, 92%);
+}
+
+.bg-paleorange {
+  background-color: hsl(33, 100%, 98%);
 }
