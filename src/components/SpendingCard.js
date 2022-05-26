@@ -72,7 +72,6 @@ const SpendingCard = () => {
                 onClick={setActiveState}
               ></div>
               <div
-                id="amount"
                 className="bg-darkbrown text-white rounded-md py-2 spending-bar-amount text-xs text-center font-bold text-bold w-14 absolute hidden"
                 style={{ top: 165 - h.height }}
               >
