@@ -60,7 +60,7 @@ const SpendingCard = () => {
       <h1 className="spending-title text-2xl font-bold">
         Spending - Last {dateAmount} days
       </h1>
-      <div role="complementary" className="grid justify-center">
+      <div className="grid justify-center">
         <div className="spending-graph w-full flex flex-row items-end scrollbar-hide relative px-4">
           {heights.map((h) => (
             <div key={h.day} className="grid place-items-center">
