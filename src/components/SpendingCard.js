@@ -56,12 +56,10 @@ const SpendingCard = () => {
     }
   }
   return (
-    <div className="bg-white rounded-xl p-6 px-8 grid gap-5">
-      <header role="banner">
-        <h1 className="spending-title text-2xl font-bold">
-          Spending - Last {dateAmount} days
-        </h1>
-      </header>
+    <div role="region" className="bg-white rounded-xl p-6 px-8 grid gap-5">
+      <h1 className="spending-title text-2xl font-bold">
+        Spending - Last {dateAmount} days
+      </h1>
       <div role="complementary" className="grid justify-center">
         <div className="spending-graph w-full flex flex-row items-end scrollbar-hide relative px-4">
           {heights.map((h) => (
@@ -87,10 +85,7 @@ const SpendingCard = () => {
         </div>
       </div>
       <div className="spending-line"></div>
-      <div
-        role="contentinfo"
-        className="spending-summary w-full grid grid-cols-3"
-      >
+      <div className="spending-summary w-full grid grid-cols-3">
         <div className="col-span-2">
           <p className="text-sm text-mediumbrown">total this month</p>
           <h1 className="text-4xl font-bold text-darkbrown">
