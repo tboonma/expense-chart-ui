@@ -3,7 +3,7 @@ import '../assets/styles/components.css'
 
 const BalanceCard = () => {
   return (
-    <div role="region" className="balance-background w-full rounded-xl p-6 flex px-8">
+    <div className="balance-background w-full rounded-xl p-6 flex px-8">
       <div className="w-4/5">
         <p className="text-white">My balance</p>
         <h1 className="text-white text-3xl font-bold">$921.48</h1>

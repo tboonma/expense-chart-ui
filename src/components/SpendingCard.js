@@ -56,7 +56,7 @@ const SpendingCard = () => {
     }
   }
   return (
-    <div role="region" className="bg-white rounded-xl p-6 px-8 grid gap-5">
+    <div className="bg-white rounded-xl p-6 px-8 grid gap-5">
       <h1 className="spending-title text-2xl font-bold">
         Spending - Last {dateAmount} days
       </h1>
